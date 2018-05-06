@@ -4,8 +4,11 @@ import org.bouncycastle.crypto.StreamCipher;
 import org.bouncycastle.crypto.engines.RC4Engine;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-public class RC4 {
-	
+public class RC4 
+{
+    
+    public static String DefaultIncomingKey = "72c5583cafb6818995cdd74b80";
+    public static String DefaultOutgoingKey = "311f80691451c71d09a13a2a6e";
 	private final StreamCipher rc4;
 	
 	public RC4(String key) {
