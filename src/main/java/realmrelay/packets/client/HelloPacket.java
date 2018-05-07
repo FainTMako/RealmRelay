@@ -17,7 +17,7 @@ public class HelloPacket extends Packet {
 	public String guid = "";
 	public String password = "";
 	public String secret = "";
-	public int keyTime;
+	public int keyTime = 0;
 	public byte[] key = new byte[0];
 	public byte[] obf1 = new byte[0];
 	public String obf2 = "";
@@ -70,6 +70,7 @@ public class HelloPacket extends Packet {
 		out.writeUTF(this.obf4);
 		out.writeUTF(this.obf5);
 		out.writeUTF(this.obf6);
+                out.writeUTF("");
 		//out.writeInt(this.obf7);
 	}
 	

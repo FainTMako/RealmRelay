@@ -42,10 +42,10 @@ public class GETXmlParse {
 		if (!file.isDirectory()) {
 			file.mkdir();
 		}
-		parseXMLtoMap("Object", XML_OBJECTS, "xml/objects.xml");
-		parseXMLtoMap("Ground", XML_TILES, "xml/tiles.xml");
+//		parseXMLtoMap("Object", XML_OBJECTS, "xml/objects.xml");
+//		parseXMLtoMap("Ground", XML_TILES, "xml/tiles.xml");
 		parseXMLtoMap("Packet", XML_PACKETS, "xml/packets.xml");
-		parseXMLtoMap("Object", XML_ITEMS, "xml/items.xml");
+//		parseXMLtoMap("Object", XML_ITEMS, "xml/items.xml");
 	}
 
 	private static void parseXMLtoMap(String elementTagName, int xmlType, String localFilePath) throws Exception {
@@ -241,7 +241,8 @@ public class GETXmlParse {
 				objectMap.put(idtemp, objectData);
 				objectMap2.put(objectData.type, objectData);
 			} else if (xmlType == XML_PACKETS) {
-				String typetemp = el.getAttribute("type");
+                            System.err.println("El: " + el.toString());
+				String typetemp = el.getAttribute("PacketID");
 				int packetType = Integer.parseInt(typetemp);
 				packetMap.put(idtemp, packetType);
 			}

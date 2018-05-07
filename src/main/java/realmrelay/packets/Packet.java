@@ -5,6 +5,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +26,7 @@ public abstract class Packet implements IData {
 		for (int i = 0; i < 127; i++) {
 			packetIdtoClassMap.add(null);
 		}
-		List<Class<? extends Packet>> list = new LinkedList<Class<? extends Packet>>();
+		List<Class<? extends Packet>> list = new LinkedList<>();
 		
 		list.add(AcceptTradePacket.class);
 		list.add(AccountListPacket.class);
@@ -178,9 +179,38 @@ public abstract class Packet implements IData {
 		return id.byteValue();
 	}
 	
-	@Override
-	public String toString() {
-		return this.getName();
-	}
+  public String toString()
+    {
+        StringBuilder result = new StringBuilder();
+        String newLine = System.getProperty("line.separator");
+
+        result.append(this.getClass().getName());
+        result.append(" Object {");
+        result.append(newLine);
+
+        //determine fields declared in this class only (no fields of superclass)
+        Field[] fields = this.getClass().getDeclaredFields();
+
+        //print field names paired with their values
+        for (Field field : fields)
+        {
+            result.append("  ");
+            try
+            {
+                result.append(field.getName());
+                result.append(": ");
+                //requires access to private field:
+                result.append(field.get(this));
+            }
+            catch (IllegalAccessException ex)
+            {
+                System.out.println(ex);
+            }
+            result.append(newLine);
+        }
+        result.append("}");
+
+        return result.toString();
+    }
 
 }
