@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class EditAccountListPacket extends Packet {
+public class EditAccountListPacket extends ClientPacket {
 	
 	public int accountListId;
 	public boolean add;

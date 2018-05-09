@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class ReconnectPacket extends Packet {
+public class ReconnectPacket extends ServerPacket {
 	
 	public String name;
 	public String host;

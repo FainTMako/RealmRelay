@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import realmrelay.packets.Packet;
 
-public class FilePacket extends Packet {
+public class FilePacket extends ServerPacket {
 
 	public String name;
 	public byte[] bytes = new byte[0];

@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class AccountListPacket extends Packet {
+public class AccountListPacket extends ServerPacket {
 	
 	public int accountListId;
 	public String[] accountIds = new String[0];

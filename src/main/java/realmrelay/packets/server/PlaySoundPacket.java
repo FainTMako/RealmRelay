@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class PlaySoundPacket extends Packet {
+public class PlaySoundPacket extends ServerPacket {
 	
 	public int ownerId;
 	public int soundId;

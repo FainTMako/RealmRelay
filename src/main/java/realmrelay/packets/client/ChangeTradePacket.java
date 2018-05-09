@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class ChangeTradePacket extends Packet {
+public class ChangeTradePacket extends ClientPacket {
 	
 	public boolean[] offer = new boolean[0];
 

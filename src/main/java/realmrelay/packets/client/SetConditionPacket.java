@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class SetConditionPacket extends Packet {
+public class SetConditionPacket extends ClientPacket {
 	
 	public int conditionEffect;
 	public float conditionDuration;

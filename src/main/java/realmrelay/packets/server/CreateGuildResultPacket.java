@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import realmrelay.packets.Packet;
 
-public class CreateGuildResultPacket extends Packet {
+public class CreateGuildResultPacket extends ServerPacket {
 	
 	public boolean success;
 	public String errorText;

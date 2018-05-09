@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class TradeDonePacket extends Packet {
+public class TradeDonePacket extends ServerPacket {
 	
 	public int code;
 	public String description;

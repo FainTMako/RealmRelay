@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class PongPacket extends Packet {
+public class PongPacket extends ClientPacket {
 	
 	public int serial;
 	public int time;

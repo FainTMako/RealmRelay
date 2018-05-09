@@ -9,7 +9,7 @@ import realmrelay.data.Tile;
 import realmrelay.packets.Packet;
 
 
-public class UpdatePacket extends Packet {
+public class UpdatePacket extends ServerPacket {
 	
 	public Tile[] tiles = new Tile[0];
 	public Entity[] newObjs = new Entity[0];

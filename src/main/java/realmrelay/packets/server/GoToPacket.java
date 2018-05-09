@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class GoToPacket extends Packet {
+public class GoToPacket extends ServerPacket {
 	
 	public int objectId;
 	public Location pos = new Location();

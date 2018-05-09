@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class Show_EffectPacket extends Packet {
+public class Show_EffectPacket extends ServerPacket {
 	
 	public int effectType;
 	public int targetObjectId;

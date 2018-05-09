@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class QuestObjIdPacket extends Packet {
+public class QuestObjIdPacket extends ServerPacket {
 	
 	public int objectId;
 

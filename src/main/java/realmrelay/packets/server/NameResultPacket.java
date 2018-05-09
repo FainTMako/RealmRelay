@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class NameResultPacket extends Packet {
+public class NameResultPacket extends ServerPacket {
 	
 	public boolean success;
 	public String errorText;

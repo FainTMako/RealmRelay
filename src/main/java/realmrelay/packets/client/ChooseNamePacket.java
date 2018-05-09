@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class ChooseNamePacket extends Packet {
+public class ChooseNamePacket extends ClientPacket {
 	
 	public String name;
 

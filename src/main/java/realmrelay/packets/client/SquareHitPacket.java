@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class SquareHitPacket extends Packet {
+public class SquareHitPacket extends ClientPacket {
 	
 	public int time;
 	public int bulletId;

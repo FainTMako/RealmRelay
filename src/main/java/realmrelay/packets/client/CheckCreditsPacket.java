@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class CheckCreditsPacket extends Packet {
+public class CheckCreditsPacket extends ClientPacket {
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {

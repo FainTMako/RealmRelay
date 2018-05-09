@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class PlayerHitPacket extends Packet {
+public class PlayerHitPacket extends ClientPacket {
 	
 	public int bulletId;
 	public int objectId;

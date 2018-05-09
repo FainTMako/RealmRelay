@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class TradeStartPacket extends Packet {
+public class TradeStartPacket extends ServerPacket {
 	
 	public Item[] myItems = new Item[0];
 	public String yourName;

@@ -8,7 +8,7 @@ import realmrelay.data.Location;
 import realmrelay.packets.Packet;
 
 
-public class PlayerShootPacket extends Packet {
+public class PlayerShootPacket extends ClientPacket {
 	
 	public int time;
 	public int bulletId;

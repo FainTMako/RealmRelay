@@ -7,7 +7,7 @@ import realmrelay.packets.Packet;
 
 /* Thanks to me, Maat, Faintmako, Gratin and pieoewieoe, for their contribution. */
 
-public class HelloPacket extends Packet {
+public class HelloPacket extends ClientPacket {
 	
 	public int Random1 = 0;
 	public int Random2 = 0;

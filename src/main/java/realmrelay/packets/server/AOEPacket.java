@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class AOEPacket extends Packet {
+public class AOEPacket extends ServerPacket {
 	
 	public Location pos = new Location();
 	public float radius;

@@ -9,7 +9,7 @@ import java.util.List;
 import realmrelay.packets.Packet;
 
 
-public class DamagePacket extends Packet {
+public class DamagePacket extends ServerPacket {
 	
 	public int targetId;
 	public List<Integer> effects = new ArrayList<>();

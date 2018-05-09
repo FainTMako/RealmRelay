@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class ReskinPacket extends Packet {
+public class ReskinPacket extends ClientPacket {
 	
 	public int skinID;
 

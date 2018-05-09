@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class MapInfoPacket extends Packet {
+public class MapInfoPacket extends ServerPacket {
 	
 	public int width;
 	public int height;

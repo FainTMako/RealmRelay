@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class AllyShootPacket extends Packet {
+public class AllyShootPacket extends ServerPacket {
 	
 	public int bulletId;
 	public int ownerId;

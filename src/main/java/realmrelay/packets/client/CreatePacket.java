@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class CreatePacket extends Packet {
+public class CreatePacket extends ClientPacket {
 	
 	public int classType;
 	public int skinType;

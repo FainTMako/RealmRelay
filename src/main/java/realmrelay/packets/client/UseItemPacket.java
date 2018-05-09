@@ -9,7 +9,7 @@ import realmrelay.data.SlotObject;
 import realmrelay.packets.Packet;
 
 
-public class UseItemPacket extends Packet {
+public class UseItemPacket extends ClientPacket {
 	
 	public int time;
 	public SlotObject slotObject = new SlotObject();

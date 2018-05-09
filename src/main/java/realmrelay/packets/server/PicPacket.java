@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class PicPacket extends Packet {
+public class PicPacket extends ServerPacket {
 	
 	public BitmapData bitmapData = new BitmapData();
 

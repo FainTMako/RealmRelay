@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class UpdateAckPacket extends Packet {
+public class UpdateAckPacket extends ClientPacket {
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {

@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class UsePortalPacket extends Packet {
+public class UsePortalPacket extends ClientPacket {
 	
 	public int objectId;
 

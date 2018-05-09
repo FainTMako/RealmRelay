@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class FailurePacket extends Packet {
+public class FailurePacket extends ServerPacket {
 	
 	public int errorId;
 	public String errorDescription;

@@ -8,7 +8,7 @@ import realmrelay.data.Location;
 import realmrelay.packets.Packet;
 
 
-public class GroundDamagePacket extends Packet {
+public class GroundDamagePacket extends ClientPacket {
 	
 	public int time;
 	public Location position = new Location();

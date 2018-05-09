@@ -9,7 +9,7 @@ import realmrelay.data.SlotObject;
 import realmrelay.packets.Packet;
 
 
-public class InvSwapPacket extends Packet {
+public class InvSwapPacket extends ClientPacket {
 	
 	public int time;
 	public Location position = new Location();

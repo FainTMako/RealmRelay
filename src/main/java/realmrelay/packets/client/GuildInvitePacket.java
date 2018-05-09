@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class GuildInvitePacket extends Packet {
+public class GuildInvitePacket extends ClientPacket {
 	
 	public String name;
 

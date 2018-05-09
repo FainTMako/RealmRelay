@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class LoadPacket extends Packet {
+public class LoadPacket extends ClientPacket {
 	
 	public int charId;
 	public boolean isFromArena;

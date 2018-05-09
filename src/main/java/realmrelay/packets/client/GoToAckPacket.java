@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class GoToAckPacket extends Packet {
+public class GoToAckPacket extends ClientPacket {
 	
 	public int time;
 

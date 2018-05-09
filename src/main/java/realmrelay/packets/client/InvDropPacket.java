@@ -8,7 +8,7 @@ import realmrelay.data.SlotObject;
 import realmrelay.packets.Packet;
 
 
-public class InvDropPacket extends Packet {
+public class InvDropPacket extends ClientPacket {
 	
 	public SlotObject slotObject = new SlotObject();
 

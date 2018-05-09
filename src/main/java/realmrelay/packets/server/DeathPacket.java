@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class DeathPacket extends Packet {
+public class DeathPacket extends ServerPacket {
 	
 	public String accountId;
 	public int charId;

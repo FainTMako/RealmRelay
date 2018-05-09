@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class NotificationPacket extends Packet {
+public class NotificationPacket extends ServerPacket {
 	
 	public int objectId;
 	public String message;

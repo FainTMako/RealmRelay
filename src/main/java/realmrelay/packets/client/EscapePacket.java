@@ -7,7 +7,7 @@ import java.io.IOException;
 import realmrelay.packets.Packet;
 
 
-public class EscapePacket extends Packet {
+public class EscapePacket extends ClientPacket {
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {
