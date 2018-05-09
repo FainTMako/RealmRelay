@@ -20,7 +20,7 @@ import realmrelay.packets.server.*;
 
 public abstract class Packet implements IData {
 
-	private static final List<Class<? extends Packet>> packetIdtoClassMap = new ArrayList<Class<? extends Packet>>(127);
+	public static final List<Class<? extends Packet>> packetIdtoClassMap = new ArrayList<Class<? extends Packet>>(127);
 	
 	public static void init() {
 		for (int i = 0; i < 127; i++) {
