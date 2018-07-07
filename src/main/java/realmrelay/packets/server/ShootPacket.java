@@ -1,4 +1,4 @@
-package realmrelay.packets.server;
+    package realmrelay.packets.server;
 
 import java.io.DataInput;
 import java.io.DataOutput;

@@ -17,7 +17,7 @@ import realmrelay.packets.client.UseItemPacket;
 import realmrelay.packets.client.UsePortalPacket;
 import realmrelay.packets.server.AllyShootPacket;
 import realmrelay.packets.server.Create_SuccessPacket;
-import realmrelay.packets.server.New_TickPacket;
+import realmrelay.packets.server.NewTickPacket;
 import realmrelay.packets.server.PingPacket;
 import realmrelay.packets.server.QuestObjIdPacket;
 import realmrelay.packets.server.ReconnectPacket;
@@ -59,7 +59,7 @@ public class PacketManager {
 		final Packet packet = event.getPacket();
 		if(showPackets && !(packet instanceof TextPacket) && !(packet instanceof AllyShootPacket) 
 				&& !(packet instanceof PingPacket) && !(packet instanceof PongPacket)
-				&& !(packet instanceof UpdatePacket) && !(packet instanceof New_TickPacket))
+				&& !(packet instanceof UpdatePacket) && !(packet instanceof NewTickPacket))
 			System.out.println("C2S: " + packet.id() + " : " + packet.getName() + " : " + packet.getBytes());
 		
 		if (packet instanceof UsePortalPacket) {
@@ -133,7 +133,7 @@ public class PacketManager {
 		Packet packet = event.getPacket();
 		if(showPackets && !(packet instanceof TextPacket) && !(packet instanceof AllyShootPacket) 
 				&& !(packet instanceof PingPacket) && !(packet instanceof PongPacket)
-				&& !(packet instanceof UpdatePacket) && !(packet instanceof New_TickPacket))
+				&& !(packet instanceof UpdatePacket) && !(packet instanceof NewTickPacket))
 			System.out.println("S2C: " + packet.id() + " : " + packet.getName() + " : " + packet.getBytes());
 		if (packet instanceof Create_SuccessPacket) {
 			Create_SuccessPacket csp = (Create_SuccessPacket) packet;
@@ -193,8 +193,8 @@ public class PacketManager {
 				}
 				
 			}
-		} else if (packet instanceof New_TickPacket) {
-			New_TickPacket ent = (New_TickPacket) packet;
+		} else if (packet instanceof NewTickPacket) {
+			NewTickPacket ent = (NewTickPacket) packet;
 			
 			for (Status he : ent.statuses) {
 				for (StatData data : he.data) {
@@ -270,7 +270,7 @@ public class PacketManager {
 		TextPacket notificationPacket = new TextPacket();
 		notificationPacket.bubbleTime = -1;
 		notificationPacket.cleanText = "";
-		notificationPacket.name = "";
+		notificationPacket.objectName = "";
 		notificationPacket.numStars = -1;
 		notificationPacket.objectId = -1;
 		notificationPacket.recipient = "";

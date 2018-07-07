@@ -9,7 +9,7 @@ import realmrelay.packets.Packet;
 
 
 
-public class New_TickPacket extends ServerPacket {
+public class NewTickPacket extends ServerPacket {
 	
 	public int tickId;
 	public int tickTime;

@@ -243,8 +243,12 @@ public class GETXmlParse {
 			} else if (xmlType == XML_PACKETS) {
                             System.err.println("El: " + el.toString());
 				String typetemp = el.getAttribute("PacketID");
-				int packetType = Integer.parseInt(typetemp);
-				packetMap.put(idtemp, packetType);
+                                System.err.println("Parsing: " + typetemp);
+                                {
+                                    int packetType = Integer.parseInt(typetemp);
+                                    packetMap.put(idtemp.toLowerCase(), packetType); 
+                                }
+		
 			}
 		}
 	}

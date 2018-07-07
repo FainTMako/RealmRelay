@@ -126,8 +126,10 @@ public class StatData implements IData {
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {
 		id = in.readUnsignedByte();
+                statType_ = id;
 		if (isUTFData()) {
 			stringValue = in.readUTF();
+                        strStatValue_ = stringValue;
 		} else {
 			intValue = in.readInt();
 		}

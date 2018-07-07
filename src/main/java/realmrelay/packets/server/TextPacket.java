@@ -4,12 +4,11 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-import realmrelay.packets.Packet;
 
 
 public class TextPacket extends ServerPacket {
 	
-	public String name;
+	public String objectName;
 	public int objectId;
 	public int numStars;
 	public int bubbleTime;
@@ -19,7 +18,7 @@ public class TextPacket extends ServerPacket {
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {
-		this.name = in.readUTF();
+		this.objectName = in.readUTF();
 		this.objectId = in.readInt();
 		this.numStars = in.readInt();
 		this.bubbleTime = in.readUnsignedByte();
@@ -30,7 +29,7 @@ public class TextPacket extends ServerPacket {
 
 	@Override
 	public void writeToOutput(DataOutput out) throws IOException {
-		out.writeUTF(this.name);
+		out.writeUTF(this.objectName);
 		out.writeInt(this.objectId);
 		out.writeInt(this.numStars);
 		out.writeByte(this.bubbleTime);

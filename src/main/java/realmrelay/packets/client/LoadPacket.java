@@ -4,9 +4,6 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-import realmrelay.packets.Packet;
-
-
 public class LoadPacket extends ClientPacket {
 	
 	public int charId;

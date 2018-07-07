@@ -210,7 +210,7 @@ public class ScriptEvent {
 	public void sendToClient(Packet packet) throws IOException {
 		byte[] packetBytes = packet.getBytes();
 		this.user.localSendRC4.cipher(packetBytes);
-		byte packetId = packet.id();
+		int packetId = packet.id();
 		int packetLength = packetBytes.length + 5;
 		DataOutputStream out = new DataOutputStream(user.localSocket.getOutputStream());
 		out.writeInt(packetLength);
@@ -226,7 +226,7 @@ public class ScriptEvent {
 	public void sendToServer(Packet packet) throws IOException {
 		byte[] packetBytes = packet.getBytes();
 		this.user.remoteSendRC4.cipher(packetBytes);
-		byte packetId = packet.id();
+		int packetId = packet.id();
 		int packetLength = packetBytes.length + 5;
 		DataOutputStream out = new DataOutputStream(user.remoteSocket.getOutputStream());
 		out.writeInt(packetLength);

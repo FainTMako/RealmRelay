@@ -13,10 +13,10 @@ public class UnknownPacket extends Packet {
 	private byte id;
 	private final List<Byte> bytes = new LinkedList<Byte>();
 
-	@Override
-	public byte id() {
-		return this.id;
-	}
+//	@Override
+//	public byte id() {
+//		return this.id;
+//	}
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {

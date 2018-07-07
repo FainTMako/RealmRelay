@@ -16,11 +16,13 @@ public class ReconnectPacket extends ServerPacket {
 	public int keyTime;
 	public boolean isFromArena;
 	public byte[] key = new byte[0];
+        public String stats;
 
 	@Override
 	public void parseFromInput(DataInput in) throws IOException {
 		this.name = in.readUTF();
 		this.host = in.readUTF();
+                this.stats = in.readUTF();
 		this.port = in.readInt();
 		this.gameId = in.readInt();
 		this.keyTime = in.readInt();
@@ -33,6 +35,7 @@ public class ReconnectPacket extends ServerPacket {
 	public void writeToOutput(DataOutput out) throws IOException {
 		out.writeUTF(this.name);
 		out.writeUTF(this.host);
+                out.writeUTF(stats);
 		out.writeInt(this.port);
 		out.writeInt(this.gameId);
 		out.writeInt(this.keyTime);
