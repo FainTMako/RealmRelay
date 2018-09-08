@@ -50,7 +50,7 @@ public abstract class Packet implements IData {
                 list.add(CheckCreditsPacket.class);
                 list.add(ChooseNamePacket.class);
                 list.add(ClientStatPacket.class);
-                list.add(Create_SuccessPacket.class);
+                list.add(CreateSuccessPacket.class);
                 list.add(CreateGuildPacket.class);
                 list.add(CreateGuildResultPacket.class);
                 list.add(CreatePacket.class);
@@ -175,6 +175,11 @@ public abstract class Packet implements IData {
 	 */
 	public static Packet create(byte id, byte[] bytes) throws Exception {
 		Packet packet = Packet.create(id);
+                if(packet == null)
+                {
+//                    System.err.println("Created null packet");
+                    throw new Exception("Made a null packet from id: " + id);
+                }
 		packet.parseFromInput(new DataInputStream(new ByteArrayInputStream(bytes)));
 		int byteLength = packet.getBytes().length;
 		if (byteLength != bytes.length) {

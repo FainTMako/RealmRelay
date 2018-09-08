@@ -150,7 +150,7 @@ public final class ROTMGRelay {
 		InetSocketAddress socketAddress = new InetSocketAddress(host, port);
 		this.gameIdSocketAddressMap.put(gameId, socketAddress);
 	}
-	
+	/*
 	public static void main(String[] args) {
 		try {
 			GETXmlParse.parseXMLData();
@@ -222,5 +222,6 @@ public final class ROTMGRelay {
 			ROTMGRelay.echo("Realm Relay listener problem. Make sure there are no instances of Realm Relay already running.");
 		}
 	}
+*/
 
 }

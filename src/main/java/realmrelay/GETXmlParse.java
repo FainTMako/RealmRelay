@@ -2,7 +2,9 @@ package realmrelay;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -20,6 +22,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import org.json.JSONObject;
 
 
 public class GETXmlParse {
@@ -37,17 +40,36 @@ public class GETXmlParse {
 	private static final int XML_PACKETS = 2;
 	private static final int XML_TILES = 3;
 
-	public static void parseXMLData() throws Exception {
+	public static void parseXMLData(File xmlFolder) throws Exception {
 		File file = new File("xml/");
 		if (!file.isDirectory()) {
 			file.mkdir();
 		}
 //		parseXMLtoMap("Object", XML_OBJECTS, "xml/objects.xml");
 //		parseXMLtoMap("Ground", XML_TILES, "xml/tiles.xml");
-		parseXMLtoMap("Packet", XML_PACKETS, "xml/packets.xml");
+		//parseXMLtoMap("Packet", XML_PACKETS, "xml/packets.xml");
+                parseJSONPackets(xmlFolder);
 //		parseXMLtoMap("Object", XML_ITEMS, "xml/items.xml");
 	}
+        
+        public static void main(String[] args) throws IOException
+    {
+        parseJSONPackets(new File("xml"));
+    }
+        private static void parseJSONPackets(File xmlFolder) throws IOException
+        {
+            String jsonFileContent = new String(Files.readAllBytes(new File(xmlFolder.getPath() + "/packets.json").toPath()));
+            JSONObject json = new JSONObject(jsonFileContent);
+            for(String packetName: json.keySet())
+            {
+                int packetId = Integer.parseInt(json.getString(packetName));
+                System.err.println("Parsing: " + packetName + ":" + packetId);
 
+                {
+                    packetMap.put(packetName.toLowerCase(), packetId); 
+                }
+            }
+        }
 	private static void parseXMLtoMap(String elementTagName, int xmlType, String localFilePath) throws Exception {
 		File file = new File(localFilePath);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
